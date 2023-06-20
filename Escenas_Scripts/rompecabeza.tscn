@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Escenas_Scripts/pieza_triangulo1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas_Scripts/Triangulos.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas_Scripts/pieza_Cuadrados.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas_Scripts/cuadrados.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Triangulo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 450, 200 )
+
+[node name="TrianguloRecIzq" parent="." instance=ExtResource( 2 )]
+position = Vector2( 391, 277 )
+
+[node name="TrianguloRecDer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 507, 277 )
+
+[node name="rectangulo" parent="." instance=ExtResource( 4 )]
+position = Vector2( 466, 277 )
+
+[node name="cuadrados" parent="." instance=ExtResource( 4 )]
+position = Vector2( 427, 277 )
+
+[node name="pieza_triangulo1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 560, 499 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_Cuadrado" parent="." instance=ExtResource( 3 )]
+position = Vector2( 292, 83 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_trianguloRecIzq" parent="." instance=ExtResource( 1 )]
+position = Vector2( 760, 268 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_trianguloRecDer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 203, 351 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_Rectangulo" parent="." instance=ExtResource( 3 )]
+position = Vector2( 601, 95 )
+scale = Vector2( 0.6, 0.6 )

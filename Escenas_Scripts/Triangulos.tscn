@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/rompecabeza-triangulo/triangulo1.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/rompecabeza-triangulo/trianguloRectangulo2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/rompecabeza-triangulo/trianguloRectangulo3.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "triangulo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "trianguloRectanguloDer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "trianguloRectanguloIzq",
+"speed": 5.0
+} ]
+
+[node name="Triangulos" type="StaticBody2D"]
+position = Vector2( 67, 39 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3, 1 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+animation = "triangulo"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, -38, 57, 38, -60, 38 )
