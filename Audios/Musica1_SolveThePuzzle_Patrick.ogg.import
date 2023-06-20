@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Musica1_SolveThePuzzle_Patrick.ogg-0166ef1952eff548bd1e71125c6a3360.oggstr"
+
+[deps]
+
+source_file="res://Audios/Musica1_SolveThePuzzle_Patrick.ogg"
+dest_files=[ "res://.import/Musica1_SolveThePuzzle_Patrick.ogg-0166ef1952eff548bd1e71125c6a3360.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
