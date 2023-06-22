@@ -35,4 +35,4 @@ frames = SubResource( 1 )
 animation = "triangulo"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 0, -38, 57, 38, -60, 38 )
+polygon = PoolVector2Array( 0, -38, 58, 38, -60, 38 )

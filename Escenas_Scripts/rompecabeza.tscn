@@ -1,43 +1,81 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Escenas_Scripts/pieza_triangulo1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas_Scripts/Triangulos.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escenas_Scripts/pieza_Cuadrados.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas_Scripts/cuadrados.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenas_Scripts/rompecabeza.gd" type="Script" id=5]
+[ext_resource path="res://Fondo_iconos/BotonRegresar.png.png" type="Texture" id=6]
 
-[node name="Node2D" type="Node2D"]
+[node name="rompecabeza" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 900.0
+margin_bottom = 600.0
+color = Color( 0.0156863, 0.545098, 0.658824, 1 )
 
 [node name="Triangulo" parent="." instance=ExtResource( 2 )]
 position = Vector2( 450, 200 )
 
 [node name="TrianguloRecIzq" parent="." instance=ExtResource( 2 )]
 position = Vector2( 391, 277 )
+collision_layer = 2
+collision_mask = 2
 
 [node name="TrianguloRecDer" parent="." instance=ExtResource( 2 )]
-position = Vector2( 507, 277 )
+position = Vector2( 507, 276 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="rectangulo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 466, 277 )
+collision_layer = 8
+collision_mask = 8
 
 [node name="cuadrados" parent="." instance=ExtResource( 4 )]
 position = Vector2( 427, 277 )
+collision_layer = 16
+collision_mask = 16
 
 [node name="pieza_triangulo1" parent="." instance=ExtResource( 1 )]
 position = Vector2( 560, 499 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="pieza_Cuadrado" parent="." instance=ExtResource( 3 )]
-position = Vector2( 292, 83 )
-scale = Vector2( 0.6, 0.6 )
-
 [node name="pieza_trianguloRecIzq" parent="." instance=ExtResource( 1 )]
 position = Vector2( 760, 268 )
 scale = Vector2( 0.6, 0.6 )
+collision_layer = 2
+collision_mask = 2
 
 [node name="pieza_trianguloRecDer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 203, 351 )
+position = Vector2( 213, 345 )
 scale = Vector2( 0.6, 0.6 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="pieza_Rectangulo" parent="." instance=ExtResource( 3 )]
-position = Vector2( 601, 95 )
+position = Vector2( 274, 103 )
 scale = Vector2( 0.6, 0.6 )
+collision_layer = 8
+collision_mask = 8
+
+[node name="pieza_Cuadrado" parent="." instance=ExtResource( 3 )]
+position = Vector2( 665, 101 )
+scale = Vector2( 0.6, 0.6 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="botonRegresar" type="TouchScreenButton" parent="."]
+position = Vector2( 813, 21 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 6 )
+
+[node name="tituloPantalla" type="Label" parent="."]
+modulate = Color( 0.109804, 0.0509804, 0.0509804, 1 )
+margin_left = 319.0
+margin_top = 29.0
+margin_right = 474.0
+margin_bottom = 43.0
+rect_scale = Vector2( 2, 2 )
+text = "Armar el Rompecabezas"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/rompecabeza-triangulo/rectangulo.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/rompecabeza-triangulo/cuadro.png" type="Texture" id=2]
+[ext_resource path="res://Escenas_Scripts/cuadrados.gd" type="Script" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -21,6 +22,7 @@ extents = Vector2( 65, 65 )
 
 [node name="cuadrados" type="StaticBody2D"]
 position = Vector2( 109, 78 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }

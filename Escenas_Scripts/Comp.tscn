@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Escenas_Scripts/pieza_Cuadrados.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas_Scripts/pieza_triangulo1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fondo_iconos/botonContinuar.png" type="Texture" id=5]
+[ext_resource path="res://Fondo_iconos/botonContinuarP.png" type="Texture" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 900.0
+margin_bottom = 600.0
+color = Color( 0.0156863, 0.545098, 0.658824, 1 )
+
+[node name="pieza_triangulo1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 391, 276 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_Cuadrado" parent="." instance=ExtResource( 3 )]
+position = Vector2( 431, 276 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_trianguloRecIzq" parent="." instance=ExtResource( 4 )]
+position = Vector2( 506, 275 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_trianguloRecDer" parent="." instance=ExtResource( 4 )]
+position = Vector2( 448, 199 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="pieza_Rectangulo" parent="." instance=ExtResource( 3 )]
+position = Vector2( 467, 276 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="tituloCompletado" type="Label" parent="."]
+modulate = Color( 0.894118, 0.623529, 0.0509804, 1 )
+self_modulate = Color( 0.894118, 0.623529, 0.0509804, 1 )
+material = SubResource( 1 )
+margin_left = 409.0
+margin_top = 250.0
+margin_right = 494.0
+margin_bottom = 265.0
+text = "¡TRIÁNGULO!"
+align = 1
+valign = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 411, 278 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+
+[node name="tiempo_Completado" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 379.0
+margin_top = 329.0
+margin_right = 516.0
+margin_bottom = 343.0
+text = "Completado en 00:30"
