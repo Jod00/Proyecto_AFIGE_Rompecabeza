@@ -2,9 +2,6 @@ extends Area2D
 
 # variables here:
 var arrastrando = false
-var offset = Vector2() # nos da la diferencia entre la posicion del toque y del objeto 
-# offset = position - posicionToque ## con esto al sumarlo a la posicion del objeto logramos que vuelva
-## al punto de origen como tipo elastico
 var posicionToque = Vector2()
 var estaArmado = false
 
