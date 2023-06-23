@@ -55,6 +55,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="pieza_Rectangulo" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 274, 103 )
 scale = Vector2( 0.6, 0.6 )
 collision_layer = 8
@@ -79,3 +80,6 @@ margin_right = 474.0
 margin_bottom = 43.0
 rect_scale = Vector2( 2, 2 )
 text = "Armar el Rompecabezas"
+
+[connection signal="tocando" from="pieza_Cuadrado" to="." method="pieza_Cuadrado_tocando"]
+[connection signal="pressed" from="botonRegresar" to="." method="_on_botonRegresar_pressed"]
