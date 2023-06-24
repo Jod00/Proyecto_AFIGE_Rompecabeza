@@ -1,10 +1,5 @@
 extends RigidBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-signal piezaColocada
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass 
