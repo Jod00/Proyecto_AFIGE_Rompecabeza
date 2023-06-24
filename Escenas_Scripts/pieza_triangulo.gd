@@ -1,6 +1,5 @@
 extends Area2D
 
-# variables here:
 var arrastrando = false
 var posicionToque = Vector2()
 var estaArmado = false
@@ -9,11 +8,11 @@ signal piezaArmada
 func _ready():
 	set_process_input(false)
 
-func pieza_Cuadrados_mouse_entered():
+func pieza_triangulo1_mouse_entered():
 	if !estaArmado:
 		set_process_input(true)
 
-func pieza_Cuadrados_mouse_exited():
+func pieza_triangulo1_mouse_exited():
 	set_process_input(false)
 
 func _input(event):
@@ -27,13 +26,12 @@ func _input(event):
 			posicionToque = event.position
 			arrastrando = false
 
-func _process(_delta):
+func _process(delta):
 	if arrastrando:
 		position = get_global_mouse_position()
 
-func _on_pieza_Cuadrados_body_entered(body):
+func pieza_triangulo1_body_entered(body):
 	arrastrando = false
 	emit_signal("piezaArmada")
 	estaArmado=true
 	set_process_input(false)
-

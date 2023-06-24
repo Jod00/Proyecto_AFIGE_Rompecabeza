@@ -5,7 +5,6 @@ extends RigidBody2D
 # var a = 2
 signal piezaColocada
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass 
@@ -13,6 +12,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-func _on_cuadrado_body_entered(body):
-	emit_signal("piezaColocada")

@@ -1,40 +1,60 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas_Scripts/pieza_Cuadrados.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas_Scripts/cuadrados.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escenas_Scripts/Triangulos.tscn" type="PackedScene" id=3]
 [ext_resource path="res://armarRompecabezas.gd" type="Script" id=4]
+[ext_resource path="res://Escenas_Scripts/pieza_triangulo1.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="TrianguloRecDer" parent="." instance=ExtResource( 3 )]
 position = Vector2( 526, 350 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="TrianguloRecIzq" parent="." instance=ExtResource( 3 )]
 position = Vector2( 323, 350 )
+collision_layer = 2
+collision_mask = 2
 
 [node name="rectangulo" parent="." instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 455, 350 )
 collision_layer = 8
 collision_mask = 8
 
 [node name="cuadrado" parent="." instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 385, 350 )
 
 [node name="Triangulos" parent="." instance=ExtResource( 3 )]
-position = Vector2( 425, 215 )
+position = Vector2( 425, 218 )
+
+[node name="pieza_triangulo" parent="." instance=ExtResource( 5 )]
+position = Vector2( 145, 93 )
+
+[node name="pieza_trianguloRecIzq" parent="." instance=ExtResource( 5 )]
+position = Vector2( 511, 73 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="pieza_trianguloRecDer" parent="." instance=ExtResource( 5 )]
+position = Vector2( 726, 448 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="pieza_Rectangulo" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 90, 459 )
 collision_layer = 8
 collision_mask = 8
 
 [node name="pieza_Cuadrado" parent="." instance=ExtResource( 1 )]
-position = Vector2( 777, 159 )
+visible = false
+position = Vector2( 760, 172 )
 collision_layer = 16
 collision_mask = 16
-
-[node name="pieza_Rectangulo" parent="." instance=ExtResource( 1 )]
-position = Vector2( 81, 283 )
-collision_layer = 8
-collision_mask = 8
 
 [connection signal="piezaArmada" from="pieza_Cuadrado" to="." method="pieza_Cuadrado_piezaArmada"]
