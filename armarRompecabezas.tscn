@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Escenas_Scripts/pieza_Cuadrados.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas_Scripts/cuadrados.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas_Scripts/Triangulos.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="cuadrado" parent="." instance=ExtResource( 2 )]
+position = Vector2( 382, 262 )
+
+[node name="rectangulo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 517, 262 )
+collision_layer = 8
+collision_mask = 8
+
+[node name="Triangulos" parent="." instance=ExtResource( 3 )]
+collision_layer = 8
+collision_mask = 8
+
+[node name="pieza_Cuadrado" parent="." instance=ExtResource( 1 )]
+position = Vector2( 720, 201 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="pieza_Rectangulo" parent="." instance=ExtResource( 1 )]
+position = Vector2( 145, 310 )
+collision_layer = 8
+collision_mask = 8

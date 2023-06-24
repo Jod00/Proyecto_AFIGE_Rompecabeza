@@ -4,19 +4,18 @@ extends Area2D
 var arrastrando = false
 var posicionToque = Vector2()
 var estaArmado = false
-signal tocando
+signal piezaArmada
 
 func _ready():
 	set_process_input(false)
 
 func pieza_Cuadrados_mouse_entered():
-	emit_signal("tocando")
-	#set_process_input(true)
+	if !estaArmado:
+		set_process_input(true)
 
 func pieza_Cuadrados_mouse_exited():
-	pass#set_process_input(false)
+	set_process_input(false)
 
-#func in
 func _input(event):
 	if event is InputEventScreenTouch:
 		if event.is_pressed():
@@ -25,17 +24,20 @@ func _input(event):
 				arrastrando = true
 		else:
 			position = event.position
+			posicionToque = event.position
 			arrastrando = false
 
 func _process(_delta):
 	if arrastrando:
 		position = get_global_mouse_position()
-	
-## para la colision , para que funcione de neuvo solo cambiar false por true
+
+func _on_pieza_Cuadrados_body_entered(body):
+	arrastrando = false
+	emit_signal("piezaArmada")
+	estaArmado=true
+	set_process_input(false)
+
+## para la colision , para que funcione den neuvo solo cambiar false por true
 #set_process_input(false) # detiene la funcion input 
-
-
-
-
 
 

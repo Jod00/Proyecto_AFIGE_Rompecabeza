@@ -24,31 +24,33 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="TrianguloRecDer" parent="." instance=ExtResource( 2 )]
-position = Vector2( 507, 276 )
+position = Vector2( 506, 279 )
 collision_layer = 4
 collision_mask = 4
 
 [node name="rectangulo" parent="." instance=ExtResource( 4 )]
-position = Vector2( 466, 277 )
+position = Vector2( 470, 278 )
 collision_layer = 8
 collision_mask = 8
 
-[node name="cuadrados" parent="." instance=ExtResource( 4 )]
-position = Vector2( 427, 277 )
-collision_layer = 16
-collision_mask = 16
+[node name="cuadrado" parent="." instance=ExtResource( 4 )]
+position = Vector2( 429, 278 )
+collision_layer = 0
 
 [node name="pieza_triangulo1" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 560, 499 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="pieza_trianguloRecIzq" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 760, 268 )
 scale = Vector2( 0.6, 0.6 )
 collision_layer = 2
 collision_mask = 2
 
 [node name="pieza_trianguloRecDer" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 213, 345 )
 scale = Vector2( 0.6, 0.6 )
 collision_layer = 4
@@ -64,8 +66,7 @@ collision_mask = 8
 [node name="pieza_Cuadrado" parent="." instance=ExtResource( 3 )]
 position = Vector2( 665, 101 )
 scale = Vector2( 0.6, 0.6 )
-collision_layer = 16
-collision_mask = 16
+collision_layer = 0
 
 [node name="botonRegresar" type="TouchScreenButton" parent="."]
 position = Vector2( 813, 21 )
@@ -81,5 +82,4 @@ margin_bottom = 43.0
 rect_scale = Vector2( 2, 2 )
 text = "Armar el Rompecabezas"
 
-[connection signal="tocando" from="pieza_Cuadrado" to="." method="pieza_Cuadrado_tocando"]
 [connection signal="pressed" from="botonRegresar" to="." method="_on_botonRegresar_pressed"]
