@@ -2,6 +2,10 @@ extends Node2D
 
 var cantidad_piezas = 5
 var avisoCompletado = false
+var tiempoSegundos = 0
+var tiempoMinutos =0
+var tiempoPuntaje
+var posicionesEspacioArmado = [Vector2(278,348),Vector2(576,348),Vector2(427,218),Vector2(492,348),Vector2(395,348)]
 
 func _ready():
 	Inicializando_piezas()
@@ -18,6 +22,7 @@ func Inicializando_espacio_piezas():
 	$TrianguloRecDer/CollisionPolygon2D.position.y +=30
 	$rectangulo/CollisionShape2D.scale.x = 0.5
 	$rectangulo/CollisionShape2D.position.x += 30
+	$puntajeTimer.start()
 	
 func Inicializando_piezas():
 	$pieza_Rectangulo/AnimatedSprite.animation = "rectangulo"
@@ -27,34 +32,36 @@ func Inicializando_piezas():
 	$pieza_trianguloRecIzq/AnimatedSprite.animation = "TrianguloRectanguloIzq"
 
 func RompecabezasCompletado():
-	print("aa")
+	$puntajeTimer.stop()
+	tiempoPuntaje = $tiempoPuntaje.text
+	print("fin")
 
 func pieza_trianguloRecIzq_piezaArmada():
-	$pieza_trianguloRecIzq.position = Vector2(278,348)
+	$pieza_trianguloRecIzq.position = posicionesEspacioArmado[0]
 	$TrianguloRecIzq.queue_free()
 	$pieza_trianguloRecIzq/CollisionShape2D.set_deferred("disabled",true)
 	cantidad_piezas -=1
 
 func pieza_trianguloRecDer_piezaArmada():
-	$pieza_trianguloRecDer.position = Vector2(576,348)
+	$pieza_trianguloRecDer.position = posicionesEspacioArmado[1]
 	$TrianguloRecDer.queue_free()
 	$pieza_trianguloRecDer/CollisionShape2D.set_deferred("disabled",true)
 	cantidad_piezas -=1
 
 func pieza_triangulo_piezaArmada():
-	$pieza_triangulo.position = Vector2(427,218)
+	$pieza_triangulo.position = posicionesEspacioArmado[2]
 	$pieza_triangulo/CollisionShape2D.set_deferred("disabled",true)
 	$Triangulos.queue_free()
 	cantidad_piezas -=1
 
 func pieza_Rectangulo_piezaArmada():
-	$pieza_Rectangulo.position = Vector2(492,348)
+	$pieza_Rectangulo.position = posicionesEspacioArmado[3]
 	$rectangulo.queue_free()
 	$pieza_Rectangulo/CollisionShape2D.set_deferred("disabled",true)
 	cantidad_piezas -=1
 
 func pieza_Cuadrado_piezaArmada():
-	$pieza_Cuadrado.position = Vector2(395,348)
+	$pieza_Cuadrado.position = posicionesEspacioArmado[4]
 	$pieza_Cuadrado/CollisionShape2D.set_deferred("disabled",true)
 	$cuadrado.queue_free()
 	cantidad_piezas -=1
@@ -66,3 +73,12 @@ func _process(_delta): # esta funcion permite detectar cambios dentro del juego
 
 func botonRegresar_pressed():
 	pass
+
+func puntajeTimer_timeout():
+	if tiempoSegundos == 60:
+		tiempoSegundos =0
+		tiempoMinutos += 1
+		$tiempoPuntaje.text = str(tiempoMinutos)+ " : "+ str(tiempoSegundos)
+	else:
+		tiempoSegundos += 1
+		$tiempoPuntaje.text = str(tiempoMinutos)+ " : "+ str(tiempoSegundos)

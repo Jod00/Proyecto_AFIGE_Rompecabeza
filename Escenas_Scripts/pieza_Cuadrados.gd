@@ -31,7 +31,7 @@ func _process(_delta):
 	if arrastrando:
 		position = get_global_mouse_position()
 
-func _on_pieza_Cuadrados_body_entered(body):
+func _on_pieza_Cuadrados_body_entered(_body):
 	arrastrando = false
 	emit_signal("piezaArmada")
 	estaArmado=true

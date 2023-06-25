@@ -26,11 +26,11 @@ func _input(event):
 			posicionToque = event.position
 			arrastrando = false
 
-func _process(delta):
+func _process(_delta):
 	if arrastrando:
 		position = get_global_mouse_position()
 
-func pieza_triangulo1_body_entered(body):
+func pieza_triangulo1_body_entered(_body):
 	arrastrando = false
 	emit_signal("piezaArmada")
 	estaArmado=true
