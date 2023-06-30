@@ -1,0 +1,62 @@
+[
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta1.jpg",
+		"opciones": ["12","1","NADA"],
+		"puntajes": [1,0,0]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta2.jpg",
+		"opciones": ["8","3","NADA"],
+		"puntajes": [1,2,4]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta3.jpg",
+		"opciones": ["29","70","NADA"],
+		"puntajes": [1,2,4]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta4.jpg",
+		"opciones": ["5","2","NADA"],
+		"puntajes": [1,2,4]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta5.jpg",
+		"opciones": ["3","5","NADA"],
+		"puntajes": [1,2,4]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta6.jpg",
+		"opciones": ["15","7","NADA"],
+		"puntajes": [1,2,4]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta7.jpg",
+		"opciones": ["2","45","NADA"],
+		"puntajes": [0,2,1]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta8.jpg",
+		"opciones": ["26","6","2"],
+		"puntajes": [1,2,3]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta9.jpg",
+		"opciones": ["42","2","4"],
+		"puntajes": [1,2,3]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta10.jpg",
+		"opciones": ["UNA LÍNEA ROJA Y OTRA \nLÍNEA MORADA","UNA LÍNEA MORADA","UNA LÍNEA ROJA"],
+		"puntajes": [1,2,3]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta11.jpg",
+		"opciones": ["UNA LÍNEA NARANJA","UNA LÍNEA AZUL","NADA"],
+		"puntajes": [1,2,4]
+	},
+	{
+		"lamina": "res://Imagenes/Preguntas/pregunta12.jpg",
+		"opciones": ["UNA LÍNEA","0","NADA"],
+		"puntajes": [1,0,0]
+	}
+]
