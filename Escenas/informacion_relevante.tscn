@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://boyjvok41r2qi"]
+
+[ext_resource type="Script" path="res://Scripts/informacion_relevante.gd" id="1_em68k"]
+[ext_resource type="Texture2D" uid="uid://camxgyqysuth5" path="res://Imagenes/Iconos/regresar.png" id="2_5fg3r"]
+[ext_resource type="Texture2D" uid="uid://bftljx7w4ei7h" path="res://Imagenes/Fondos/fondo_marco.png" id="2_wuhf6"]
+[ext_resource type="Theme" uid="uid://j6woexrptvnt" path="res://Temas/normal.theme" id="3_i821g"]
+
+[node name="informacion_relevante" type="Node2D"]
+script = ExtResource("1_em68k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_wuhf6")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="regresar_icono" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+tooltip_text = "REGRESAR"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_i821g")
+icon = ExtResource("2_5fg3r")
+icon_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 125
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="informacion_titulo" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_i821g")
+text = "información relevante"
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="acerca_texto" type="RichTextLabel" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_i821g")
+bbcode_enabled = true
+text = "[font_size=60][b]ACERCA DEL DALTONISMO[/b][/font_size]
+[indent]El daltonismo, también llamado la deficiencia de la visión del color, es la afección en que la persona no puede ver ciertos colores como lo hace la mayoría de las personas o cabe la posibilidad de no ver ningún color en absoluto. Ocurre por la ausencia o el funcionamiento incorrecto de las células conocidas como conos que se encuentran en la retina, aquellas células que se encargan de detectar los colores y están concentrados cerca del centro de la visión. A grandes rasgos el daltonismo se puede clasificar en tres grupos llamados daltonismo rojo-verde, daltonismo azul-amarillo, y daltonismo completo. La organización [i]Colour Blind Awareness[/i] estima que a nivel global 4.5% de la población total, es decir 300 millones de personas, poseen esta deficiencia siendo los más afectados los del género masculino puesto que 1 de cada 12 hombres es daltónico, mientras que en las del género femenino solo sucede en 1 de cada 200 mujeres. El daltonismo es una condición que se adquiere por genética y rara vez, pero cabe la posibilidad, se adquiere con el tiempo que puede ser producto de alguna enfermedad, traumatismo, o los efectos tóxicos de ciertos medicamentos. Por ende, es fácilmente identificable en los niños, más cuando se les empieza a enseñar los colores. Para un diagnóstico certero se recomienda ir al oftalmólogo para realizar las pruebas pertinentes y dictaminar los tipos de daltonismo que padece. Mientras más temprano se diagnostique la deficiencia, mejor será para el rendimiento del niño porque se le dará mayor apoyo en su proceso de aprendizaje y formación. Es esencial conocer esto puesto que el niño puede ser objeto de acoso por personas ignorantes, sufrir de inseguridad o desarrollar una baja autoestima resultante de equivocaciones en actividades asociadas directamente a los colores, o inclusive ser incapaz de disfrutar comidas que considere poco apetecible o ser incapaz de jugar correctamente un deporte porque no consigue diferenciar los colores de los uniformes de los equipos. Para mayor información puede visitar el sitio web [hint=PRESIONA PARA MAYOR INFORMACIÓN][url=https://www.colourblindawareness.org/]Colour Blind Awareness[/url][/hint].[/indent]
+
+[font_size=60][b]ACERCA DE AFIGE[/b][/font_size]
+[indent]AFIGE es un aplicativo didáctico con énfasis en la gamificación que permite el entrenamiento y facilita la enseñanza de ocho figuras geométricas bidimensionales (2D) por medio del armado de rompecabezas con dichas figuras geométricas. Está pensado para personas con deficiencia de visión del color puesto que, en muchos casos, por no decir en todos, no se trata el daltonismo como una discapacidad, más bien como un defecto que pasa por desapercibido en las vidas de quienes no poseen esta condición. Las personas que presentan la misma, indistintamente del tipo, viven diariamente con problemas cotidianos que desde niños se les ha inculcado a lidiar y aprender a vivir con ello. Por consecuente, AFIGE pretende proporcionar la enseñanza de un tema en especifico sin dejar de lado la diversión de los videojuegos y, sobre todo, tomando en consideración cualquier disconformidad que podría presentar los efectos del daltonismo al no ser posible distinguir todos los colores. A su vez, promueve el desarrollo de videojuegos centrados en jugadores con discapacidades.[/indent]
+
+[font_size=60][b]ACERCA DE LOS DESARROLLADORES[/b][/font_size]
+[indent]Aplicativo creado por Juan Barría y Diana Chen, estudiantes de la carrera de Ingeniería de Software en la Universidad Tecnológica de Panamá. © AFIGE 2023.[/indent]
+"
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/regresar_icono" to="." method="_on_regresar_icono_pressed"]
+[connection signal="meta_clicked" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer/acerca_texto" to="." method="_on_acerca_texto_meta_clicked"]

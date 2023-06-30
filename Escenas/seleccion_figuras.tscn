@@ -1,0 +1,235 @@
+[gd_scene load_steps=13 format=3 uid="uid://dinxvq8eteroo"]
+
+[ext_resource type="Script" path="res://Scripts/seleccion_figuras.gd" id="1_bwonp"]
+[ext_resource type="Texture2D" uid="uid://bftljx7w4ei7h" path="res://Imagenes/Fondos/fondo_marco.png" id="2_jmsrf"]
+[ext_resource type="Theme" uid="uid://j6woexrptvnt" path="res://Temas/normal.theme" id="3_fo6m5"]
+[ext_resource type="Texture2D" uid="uid://dfuuhfs67r3ag" path="res://Imagenes/Figuras Geometricas/circulo.png" id="4_m5jr1"]
+[ext_resource type="Texture2D" uid="uid://camxgyqysuth5" path="res://Imagenes/Iconos/regresar.png" id="4_mgkfq"]
+[ext_resource type="Texture2D" uid="uid://ccivq4q0qd7vt" path="res://Imagenes/Figuras Geometricas/cuadrado.png" id="6_3mqxv"]
+[ext_resource type="Texture2D" uid="uid://76dxahymi06d" path="res://Imagenes/Figuras Geometricas/triangulo.png" id="7_6smyl"]
+[ext_resource type="Texture2D" uid="uid://bxrwxl8vwktas" path="res://Imagenes/Figuras Geometricas/pentagono.png" id="8_coa0l"]
+[ext_resource type="Texture2D" uid="uid://sk3d2pyd4vwr" path="res://Imagenes/Figuras Geometricas/rectangulo.png" id="9_m5fb0"]
+[ext_resource type="Texture2D" uid="uid://bd7c6hjkcmeuo" path="res://Imagenes/Figuras Geometricas/romboide.png" id="10_7lghm"]
+[ext_resource type="Texture2D" uid="uid://c6366r7mny232" path="res://Imagenes/Figuras Geometricas/rombo.png" id="11_8sbuf"]
+[ext_resource type="Texture2D" uid="uid://dp0l7qs1b8i7t" path="res://Imagenes/Figuras Geometricas/elipse.png" id="12_lmtc2"]
+
+[node name="seleccion_figuras" type="Node2D"]
+script = ExtResource("1_bwonp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_jmsrf")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="regresar_icono" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+tooltip_text = "REGRESAR"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+icon = ExtResource("4_mgkfq")
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="seleccion_figuras_titulo" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_fo6m5")
+text = "selecciona una figura"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_circulo" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "CÍRCULO"
+icon = ExtResource("4_m5jr1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_cuadrado" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "CUADRADO"
+icon = ExtResource("6_3mqxv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_triangulo" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "TRIÁNGULO"
+icon = ExtResource("7_6smyl")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_pentagono" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer4"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "PENTÁGONO"
+icon = ExtResource("8_coa0l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_rectangulo" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "RECTÁNGULO"
+icon = ExtResource("9_m5fb0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_romboide" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer2"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "ROMBOIDE"
+icon = ExtResource("10_7lghm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_rombo" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer3"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "ROMBO"
+icon = ExtResource("11_8sbuf")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="figura_elipse" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_fo6m5")
+text = "ELIPSE"
+icon = ExtResource("12_lmtc2")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/regresar_icono" to="." method="_on_regresar_icono_pressed"]

@@ -1,0 +1,173 @@
+[gd_scene load_steps=12 format=3 uid="uid://ffod48wnpkmb"]
+
+[ext_resource type="Script" path="res://Scripts/pantalla_principal.gd" id="1_t2k2u"]
+[ext_resource type="PackedScene" uid="uid://bjjwbw4bej8vb" path="res://Escenas/pantalla_principal_fondo.tscn" id="2_abbdk"]
+[ext_resource type="Theme" uid="uid://j6woexrptvnt" path="res://Temas/normal.theme" id="3_bubrt"]
+[ext_resource type="Texture2D" uid="uid://cor1nadthxgfe" path="res://Imagenes/Iconos/pincel.png" id="4_osug6"]
+[ext_resource type="Texture2D" uid="uid://dgvgfrbiicqin" path="res://Imagenes/Iconos/barras.png" id="5_x5hse"]
+[ext_resource type="Texture2D" uid="uid://7jqnxtcm4xog" path="res://Imagenes/Iconos/musica.png" id="6_jhinf"]
+[ext_resource type="Script" path="res://Scripts/musica_icono.gd" id="7_m1uvt"]
+[ext_resource type="Texture2D" uid="uid://bi0krrv5eqf7t" path="res://Imagenes/Iconos/sonido.png" id="8_3qpte"]
+[ext_resource type="Texture2D" uid="uid://bki4ejniycn4a" path="res://Imagenes/Iconos/informacion.png" id="9_4rj82"]
+[ext_resource type="Texture2D" uid="uid://c2a7cx482fntg" path="res://Imagenes/Iconos/salir.png" id="10_rrbk5"]
+[ext_resource type="PackedScene" uid="uid://7tdlgrvljedh" path="res://Escenas/salir_ventana.tscn" id="12_wh8sj"]
+
+[node name="pantalla_principal" type="Node2D"]
+script = ExtResource("1_t2k2u")
+
+[node name="pantalla_principal_fondo" parent="." instance=ExtResource("2_abbdk")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="iconos_ botones" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/iconos_ botones"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="paleta_colores_icono" type="Button" parent="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer"]
+layout_mode = 2
+tooltip_text = "CAMBIAR PALETA DE COLORES"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+icon = ExtResource("4_osug6")
+icon_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/iconos_ botones"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="estadistica_icono" type="Button" parent="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer2"]
+layout_mode = 2
+tooltip_text = "VER HISTORIAL DE TIEMPOS"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+icon = ExtResource("5_x5hse")
+icon_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/iconos_ botones"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="musica_icono" type="Button" parent="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer3"]
+layout_mode = 2
+tooltip_text = "PAUSAR MÚSICA DE FONDO"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+icon = ExtResource("6_jhinf")
+icon_alignment = 1
+script = ExtResource("7_m1uvt")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/iconos_ botones"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="sonido_icono" type="Button" parent="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer4"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+icon = ExtResource("8_3qpte")
+icon_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/VBoxContainer/iconos_ botones"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="informacion_icono" type="Button" parent="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer5"]
+layout_mode = 2
+tooltip_text = "ACERCA DE AFIGE"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+icon = ExtResource("9_4rj82")
+icon_alignment = 1
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/VBoxContainer/iconos_ botones"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="salir_icono" type="Button" parent="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer6"]
+layout_mode = 2
+tooltip_text = "SALIR DEL JUEGO"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+icon = ExtResource("10_rrbk5")
+icon_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="nombre_app" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("3_bubrt")
+theme_override_colors/font_shadow_color = Color(0.14902, 0.14902, 0.145098, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/shadow_outline_size = 30
+theme_override_font_sizes/font_size = 200
+text = "afige"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 700
+theme_override_constants/margin_right = 700
+
+[node name="jugar_boton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_bubrt")
+text = "JUGAR"
+icon_alignment = 1
+expand_icon = true
+
+[node name="salir_ventana" parent="." instance=ExtResource("12_wh8sj")]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer/paleta_colores_icono" to="." method="_on_paleta_colores_icono_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer3/musica_icono" to="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer3/musica_icono" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer5/informacion_icono" to="." method="_on_informacion_icono_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/iconos_ botones/MarginContainer6/salir_icono" to="." method="_on_salir_icono_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/jugar_boton" to="." method="_on_jugar_boton_pressed"]

@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://bphko8txf04nt"]
+
+[ext_resource type="Texture2D" uid="uid://camxgyqysuth5" path="res://Imagenes/Iconos/regresar.png" id="1_fh45b"]
+[ext_resource type="Texture2D" uid="uid://bftljx7w4ei7h" path="res://Imagenes/Fondos/fondo_marco.png" id="1_lwmll"]
+[ext_resource type="Script" path="res://Scripts/paleta_colores.gd" id="1_vywmr"]
+[ext_resource type="Theme" uid="uid://j6woexrptvnt" path="res://Temas/normal.theme" id="2_gds4u"]
+[ext_resource type="Texture2D" uid="uid://hjvpcsn8pb7s" path="res://Imagenes/Iconos/patron1_lineas_zigzag.png" id="4_5qfpc"]
+[ext_resource type="Texture2D" uid="uid://d23c15swra8j4" path="res://Imagenes/Iconos/patron3_cuadrados.png" id="5_adh4c"]
+[ext_resource type="Texture2D" uid="uid://sodlbd2253gl" path="res://Imagenes/Iconos/patron4_triangulos.png" id="6_j7c5v"]
+[ext_resource type="Texture2D" uid="uid://be4sfo6qd1o8u" path="res://Imagenes/Iconos/patron2_lineas_diagonales.png" id="7_ctt3x"]
+
+[node name="paleta_colores" type="Node2D"]
+script = ExtResource("1_vywmr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_lwmll")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="regresar_icono" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+tooltip_text = "REGRESAR"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_gds4u")
+icon = ExtResource("1_fh45b")
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="paleta_colores_titulo" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_gds4u")
+text = "paleta de colores"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 150
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="paleta_colores1" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_gds4u")
+text = "ESTÁNDAR"
+icon = ExtResource("4_5qfpc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="paleta_colores2" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_gds4u")
+text = "PROTANOPIA"
+icon = ExtResource("5_adh4c")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="paleta_colores3" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_gds4u")
+text = "DEUTERANOPIA"
+icon = ExtResource("6_j7c5v")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="paleta_colores4" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer4"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_gds4u")
+text = "OSCURO"
+icon = ExtResource("7_ctt3x")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/regresar_icono" to="." method="_on_regresar_icono_pressed"]

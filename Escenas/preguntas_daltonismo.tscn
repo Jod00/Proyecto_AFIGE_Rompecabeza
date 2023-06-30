@@ -1,0 +1,182 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceci1h22q1pk"]
+
+[ext_resource type="Texture2D" uid="uid://bftljx7w4ei7h" path="res://Imagenes/Fondos/fondo_marco.png" id="1_r2jyu"]
+[ext_resource type="Theme" uid="uid://j6woexrptvnt" path="res://Temas/normal.theme" id="2_8kts6"]
+[ext_resource type="Texture2D" uid="uid://dvs5esievoomb" path="res://Imagenes/Preguntas/pregunta2.jpg" id="4_nq4uh"]
+
+[node name="preguntas_daltonismo" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r2jyu")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_8kts6")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 125
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 30
+
+[node name="preguntas_daltonismo_titulo" type="Label" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_8kts6")
+text = "¿qué ves?"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 75
+
+[node name="lamina_prueba" type="TextureRect" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_nq4uh")
+expand_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 150
+
+[node name="PanelContainer" type="PanelContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme = ExtResource("2_8kts6")
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="opcion1_daltonismo" type="Button" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_8kts6")
+text = "opcion1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="opcion2_daltonismo" type="Button" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_8kts6")
+text = "opcion2"
+
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="opcion3_daltonismo" type="Button" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_8kts6")
+text = "opcion3"
+
+[node name="numero_preguntas_daltonismo" type="Label" parent="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_8kts6")
+theme_override_font_sizes/font_size = 50
+text = "numero de preguntas"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="pressed" from="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer/MarginContainer/opcion1_daltonismo" to="." method="_on_opcion_1_daltonismo_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer/MarginContainer2/opcion2_daltonismo" to="." method="_on_opcion_2_daltonismo_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer2/VBoxContainer2/VBoxContainer/MarginContainer3/opcion3_daltonismo" to="." method="_on_opcion_3_daltonismo_pressed"]

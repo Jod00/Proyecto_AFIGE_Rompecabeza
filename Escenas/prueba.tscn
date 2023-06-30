@@ -1,0 +1,176 @@
+[gd_scene load_steps=10 format=3 uid="uid://bm5mcfbaacu5i"]
+
+[ext_resource type="Script" path="res://Scripts/preguntas_daltonismo.gd" id="1_m0fa0"]
+[ext_resource type="Texture2D" uid="uid://b42oei0kdtuda" path="res://Imagenes/Fondos/preguntas_daltonismo_fondo.png" id="2_eokpe"]
+[ext_resource type="Texture2D" uid="uid://dvs5esievoomb" path="res://Imagenes/Preguntas/pregunta2.jpg" id="3_7l5tf"]
+[ext_resource type="Theme" uid="uid://j6woexrptvnt" path="res://Temas/normal.theme" id="3_ubdhw"]
+[ext_resource type="Texture2D" uid="uid://bbq2jpuuq28v2" path="res://Imagenes/Fondos/figuras_geometricas_fondo.jpeg" id="3_ugiag"]
+[ext_resource type="Texture2D" uid="uid://662yqxet6tho" path="res://Imagenes/Iconos/antes.png" id="6_y31sx"]
+[ext_resource type="Texture2D" uid="uid://cv61sl1l16g2h" path="res://Imagenes/Iconos/despues.png" id="7_k2v35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewjum"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xs0uw"]
+
+[node name="preguntas_daltonismo" type="Node2D"]
+script = ExtResource("1_m0fa0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_ugiag")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ubdhw")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Panel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_eokpe")
+
+[node name="preguntas_daltonismo_titulo" type="Label" parent="."]
+offset_left = 336.0
+offset_top = 216.0
+offset_right = 689.0
+offset_bottom = 313.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("3_ubdhw")
+theme_override_font_sizes/font_size = 80
+text = "¿qué ves?"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="numero_preguntas_daltonismo" type="Label" parent="."]
+offset_left = 232.0
+offset_top = 832.0
+offset_right = 484.0
+offset_bottom = 894.0
+rotation = -0.15708
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_ubdhw")
+theme_override_font_sizes/font_size = 50
+text = "preguntas"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="lamina_prueba" type="TextureRect" parent="."]
+offset_left = 312.0
+offset_top = 313.0
+offset_right = 712.0
+offset_bottom = 713.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_7l5tf")
+
+[node name="opcion1_daltonismo" type="Button" parent="."]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 1125.0
+offset_top = 400.0
+offset_right = 1625.0
+offset_bottom = 525.0
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_ubdhw")
+theme_override_font_sizes/font_size = 40
+text = "opcion1"
+
+[node name="opcion2_daltonismo" type="Button" parent="."]
+custom_minimum_size = Vector2(510, 100)
+offset_left = 1110.0
+offset_top = 550.0
+offset_right = 1630.0
+offset_bottom = 675.0
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_ubdhw")
+theme_override_font_sizes/font_size = 40
+text = "opcion2"
+
+[node name="opcion3_daltonismo" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 100)
+offset_left = 1095.0
+offset_top = 700.0
+offset_right = 1635.0
+offset_bottom = 825.0
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_ubdhw")
+theme_override_font_sizes/font_size = 40
+text = "opcion3"
+
+[node name="pregunta_anterior_icono" type="Button" parent="."]
+offset_left = 1423.0
+offset_top = 222.0
+offset_right = 1513.0
+offset_bottom = 312.0
+rotation = -0.122173
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "PREGUNTA ANTERIOR"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ewjum")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xs0uw")
+icon = ExtResource("6_y31sx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="pregunta_siguiente_icono" type="Button" parent="."]
+offset_left = 1515.0
+offset_top = 208.0
+offset_right = 1605.0
+offset_bottom = 298.0
+rotation = -0.122173
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "SIGUIENTE PREGUNTA"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ewjum")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xs0uw")
+icon = ExtResource("7_k2v35")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="opcion1_daltonismo" to="." method="_on_opcion_1_daltonismo_pressed"]
+[connection signal="pressed" from="opcion2_daltonismo" to="." method="_on_opcion_2_daltonismo_pressed"]
+[connection signal="pressed" from="opcion3_daltonismo" to="." method="_on_opcion_3_daltonismo_pressed"]
+[connection signal="pressed" from="pregunta_anterior_icono" to="." method="_on_pregunta_anterior_icono_pressed"]
+[connection signal="pressed" from="pregunta_siguiente_icono" to="." method="_on_pregunta_siguiente_icono_pressed"]

@@ -1,0 +1,332 @@
+[gd_scene load_steps=12 format=3 uid="uid://clvj73p0ofdf6"]
+
+[ext_resource type="Texture2D" uid="uid://camxgyqysuth5" path="res://Imagenes/Iconos/regresar.png" id="1_qhnh3"]
+[ext_resource type="Texture2D" uid="uid://dfuuhfs67r3ag" path="res://Imagenes/Figuras Geometricas/circulo.png" id="2_p6mw6"]
+[ext_resource type="Texture2D" uid="uid://ccivq4q0qd7vt" path="res://Imagenes/Figuras Geometricas/cuadrado.png" id="3_3lxam"]
+[ext_resource type="Texture2D" uid="uid://dp0l7qs1b8i7t" path="res://Imagenes/Figuras Geometricas/elipse.png" id="4_67gmi"]
+[ext_resource type="Texture2D" uid="uid://bxrwxl8vwktas" path="res://Imagenes/Figuras Geometricas/pentagono.png" id="5_parto"]
+[ext_resource type="Texture2D" uid="uid://sk3d2pyd4vwr" path="res://Imagenes/Figuras Geometricas/rectangulo.png" id="6_3hioa"]
+[ext_resource type="Texture2D" uid="uid://c6366r7mny232" path="res://Imagenes/Figuras Geometricas/rombo.png" id="7_vrwsi"]
+[ext_resource type="Texture2D" uid="uid://bd7c6hjkcmeuo" path="res://Imagenes/Figuras Geometricas/romboide.png" id="8_pg05a"]
+[ext_resource type="Texture2D" uid="uid://76dxahymi06d" path="res://Imagenes/Figuras Geometricas/triangulo.png" id="9_h7vl2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkli7"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqqc1"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.129412, 0.141176, 0.152941, 1)
+
+[node name="paleta_colores" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.0156863, 0.545098, 0.658824, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="regresar_icono" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kkli7")
+icon = ExtResource("1_qhnh3")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 80
+text = "Historial de Tiempos"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+text = "Mejores Tiempos en General"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("2_p6mw6")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("3_3lxam")
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("4_67gmi")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("5_parto")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("6_3hioa")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("7_vrwsi")
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("8_pg05a")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer4"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+icon = ExtResource("9_h7vl2")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+text = "Historial de Tiempos de Triángulo
+"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "#"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "Tiempo"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "Día y Hora"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "00:01:00"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer3/MarginContainer/VBoxContainer/VBoxContainer3/HBoxContainer2/MarginContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.129412, 0.141176, 0.152941, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_cqqc1")
+text = "19/6/2023 15:20"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjjwbw4bej8vb"]
+
+[ext_resource type="Script" path="res://Scripts/pantalla_principal_fondo.gd" id="1_71epm"]
+[ext_resource type="Texture2D" uid="uid://bbq2jpuuq28v2" path="res://Imagenes/Fondos/figuras_geometricas_fondo.jpeg" id="2_8ltdh"]
+
+[node name="pantalla_principal_fondo" type="ParallaxBackground"]
+script = ExtResource("1_71epm")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="figuras_geometricas_fondo" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(960, 540)
+scale = Vector2(1.47692, 0.883797)
+texture = ExtResource("2_8ltdh")
