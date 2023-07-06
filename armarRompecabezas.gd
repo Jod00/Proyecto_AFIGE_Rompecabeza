@@ -34,6 +34,8 @@ func Inicializando_piezas():
 func RompecabezasCompletado():
 	$puntajeTimer.stop()
 	tiempoPuntaje = $tiempoPuntaje.text
+	$botonRegresar.hide()
+	$pantallaCompletado.MostrarEscenaCompletado()
 	print("fin")
 
 func pieza_trianguloRecIzq_piezaArmada():
